@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Friendway - Survey</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+
+<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color: #0066ff;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;"><span aria-hidden="true">&times;  </span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel" style="color: white;"><b><i>Your Friendway Match</i></b></h4>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img id="matchImg" src="https://pbs.twimg.com/media/BKCxYCZCEAASrhu.jpg">
+          </div>
+          <div class="col-md-7" id="matchText">
+          </div>  
+        </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-default" id="navbar" style="background-color: #0066ff;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/survey" style="color: white;">
+        <p><b><i>Friendway<i class="material-icons md-18">person_add</i></i></b></p>
+      </a>
+    </div>
+  </div>
+</nav>
+	<h4>Name</h4>
+	<input type="text" id="name" class="form-control">
+	<h4>Link to photo</h4>
+	<input type="text" id="photo" class="form-control">
+  <h4>Email</h4>
+  <input type="text" id="email" class="form-control">
+  <h4>Description</h4>
+  <textarea class="form-control" id="bio" rows="4" placeholder="Tell us a little about yourself..."></textarea>
+	<hr>
+	<h3><b>Please answer the following: </b></h3>
+  <br>
+	<h4><b>1. </b>Interacting with many people throughout the day energizes you.</h4>
+  <div class="row">
+    <div class="col-xs-2">  
+	     <select class="form-control" id="q1">
+	 		    <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+       </select>
+    </div>
+  </div>
+    <br>
+    <h4><b>2. </b>You maintain a small, trusted circle of close friends rather than a large network of friendships.</h4>
+    <div class="row">
+      <div class="col-xs-2">
+        <select class="form-control" id="q2">
+	 		    <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <h4><b>3. </b>You enjoy thrilling, exhilarating experiences that involve a sense of risk-taking.</h4>
+    <div class="row">
+      <div class="col-xs-2">
+        <select class="form-control" id="q3">
+	 		    <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <h4><b>4. </b>An ideal day would be quality time to yourself relaxing and enjoying your own personal hobbies.</h4>
+    <div class="row">
+      <div class="col-xs-2">
+        <select class="form-control" id="q4">
+	 		    <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <h4><b>5. </b>You value people primarily for the tangible benefits they offer you through associating with them.</h4>
+    <div class="row">
+      <div class="col-xs-2">
+        <select class="form-control" id="q5">
+	 		    <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <h4><b>6. </b>You naturally empathize with people who are marginalized among your personal associates.</h4>
+    <div class="row">
+      <div class="col-xs-2"> 
+        <select class="form-control" id="q6">
+	 		    <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <h4><b>7. </b>Acquiring wealth and a respected reputation is important to you.</h4>
+    <div class="row">
+      <div class="col-xs-2">
+        <select class="form-control" id="q7">
+	 		    <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <h4><b>8. </b>Your sense of self-worth is based on intangible, immaterial concepts.</h4>
+    <div class="row">
+      <div class="col-xs-2">
+        <select class="form-control" id="q8">
+	 		    <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <h4><b>9. </b>It is important to keep up with the latest trends, fashions, and technologies.</h4>
+    <div class="row">
+      <div class="col-xs-2">
+        <select class="form-control" id="q9">
+	 		    <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <h4><b>10. </b>It is important to maintain core altruistic values that will be upheld throughout a lifetime.</h4>
+    <div class="row">
+      <div class="col-xs-2">
+        <select class="form-control" id="q10">
+	 		    <option value=""></option>
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+      </div>
+    </div>
+<hr>
+<button id="submitBtn" class="btn btn-success">Submit Answers</button>
+<hr>
+<br>
+<br>
+
+<footer>
+    <div class="footer-container">
+        <a href="/api/friends">API Friends List</a>
+            |
+        <a href="#">GitHub Repo</a>
+    </div>
+</footer>
+
+</div>
+
+<script type="text/javascript">
+
+    $('#submitBtn').on("click", function(){
+
+        var newFriend =
+        {
+          name: $("#name").val().trim(),
+          photo: $("#photo").val().trim(),
+          bio: $("#bio").val().trim(),
+          email: $("#email").val().trim(),
+          scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+        };
+
+        var currentURL = window.location.origin;
+
+        $.post(currentURL + "/api/friends", newFriend, function(data){
+            console.log(data);
+
+
+                //$('#matchImg').attr("src", match.photo);
+                //%("#matchName").append("<h2>" + data.name + "</h2>");
+            $("#myModal").modal('toggle');
+        });
+
+        $.get(currentURL + "/api/match", function(data){
+
+            $("#matchImg").empty();
+            $("#matchText").empty();
+            $("#matchImg").attr("src", data[0].photo);
+            $("#matchText").append("<h3>" + data[0].name + ":</h3>");
+            $("#matchText").append("<h4>" + data[0].bio + "</h4>");
+            $("#matchText").append("<br><br><br><h5><b>Contact your new friend now! Email: " + data[0].email + "</b></h5>");
+        })
+
+    return false;
+
+    });
+
+</script>
+
+</body>
+</html>
