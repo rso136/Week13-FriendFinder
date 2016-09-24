@@ -1,0 +1,58 @@
+<!--This is the scripting I used to display the information within the modal-->
+
+<script type="text/javascript">
+
+    $('#submitBtn').on("click", function(){
+
+        var newFriend =
+        {
+          name: $("#name").val().trim(),
+          photo: $("#photo").val().trim(),
+          bio: $("#bio").val().trim(),
+          email: $("#email").val().trim(),
+          scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+        };
+
+        var currentURL = window.location.origin;
+
+        $.post(currentURL + "/api/friends", newFriend, function(data){
+            console.log(data);
+
+            $("#myModal").modal('toggle');
+        });
+
+        $.get(currentURL + "/api/match", function(data){
+
+            $("#matchImg").empty();
+            $("#matchText").empty();
+            $("#matchImg").attr("src", data[0].photo);
+            $("#matchText").append("<h3>" + data[0].name + ":</h3>");
+            $("#matchText").append("<h4>" + data[0].bio + "</h4>");
+            $("#matchText").append("<br><br><br><h5><b>Contact your new friend now! Email: " + data[0].email + "</b></h5>");
+        })
+
+    return false;
+
+    });
+
+</script>
+
+<!--This is the html I utilized for the modal. I used bootstrap as the framework-->
+
+<div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color: #0066ff;">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;"><span aria-hidden="true">&times;  </span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel" style="color: white;"><b><i>Your Friendway Match</i></b></h4>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img id="matchImg" src="https://pbs.twimg.com/media/BKCxYCZCEAASrhu.jpg">
+          </div>
+          <div class="col-md-7" id="matchText">
+          </div>  
+        </div>
+    </div>
+  </div>
+</div> 

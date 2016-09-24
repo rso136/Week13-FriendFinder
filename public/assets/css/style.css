@@ -32,3 +32,8 @@ body {
 #columnB {
 	margin-left: 40px;
 }
+
+#modalFooterText {
+    text-align: left;
+}
+
