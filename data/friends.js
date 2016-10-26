@@ -20,7 +20,7 @@ var friends = [
 
 	{
 		name: 'Glenn',
-		photo: "http://vignette1.wikia.nocookie.net/walkingdead/images/a/a4/Season_five_glenn_rhee.png/revision/20141103202402",
+		photo: "http://www.comicbookreligion.com/img/g/l/Glenn_Rhee_2.jpg",
 		bio: "I like battling the walking dead. Let's chill while barely evading the ravenous horde of biters that pursue me all day, everyday. I think you'll find that even though I'm a little on the awkward side, it really does add to my charm. Everybody likes me, dude.",
 		email: "placeholder@none.com",
 		scores: [
