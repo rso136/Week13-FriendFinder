@@ -21,7 +21,7 @@ var friends = [
 	{
 		name: 'Glenn',
 		photo: "http://www.comicbookreligion.com/img/g/l/Glenn_Rhee_2.jpg",
-		bio: "I like battling the walking dead. Let's chill while barely evading the ravenous horde of biters that pursue me all day, everyday. I think you'll find that even though I'm a little on the awkward side, it really does add to my charm. Everybody likes me, dude.",
+		bio: "I am an action hero though I don't look like it. But if you look past my tough exterior, I am a sensitive soul. I think you'll find that even though I'm a little on the awkward side, it really does add to my charm. Everybody likes me, dude.",
 		email: "Glenn@email.com",
 		scores: [
 			"2",
