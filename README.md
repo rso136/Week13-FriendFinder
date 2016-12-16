@@ -3,7 +3,7 @@
 Description: Friendway is a node application intended to demonstrate jquery and express.js proficiency. 
 Personality matches in this application are fictional.
 
-The technologies utilized in this application is as follows:
+The technologies utilized in this application are as follows:
 
 - Node.js
 - Express.js 
